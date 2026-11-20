@@ -1,14 +1,16 @@
-#include "function_pointers.h"
+#include "main.h"
 
 /**
- * print_name - prints a name
- * @name: name to print
- * @f: function pointer
- * Return: void
+ * main - prints _putchar
+ * Return: 0
  */
-void print_name(char *name, void (*f)(char *))
+int main(void)
 {
-	if (f == NULL)
-		return;
-	f(name);
+	const char str[9] = "_putchar\n";
+	int i;
+
+	for (i = 0; i < 9; i++)
+		_putchar(str[i]);
+
+	return (0);
 }
